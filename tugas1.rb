@@ -15,19 +15,19 @@ users.push({:username => username, :password => password})
 # user = {:password => password}
 
 block = 1
-while block <= 3
+while block <= 3 do
     puts "masukkan username yang benar"
     username = gets.chomp
     puts "masukkan password yang benar"
     password = gets.chomp
-    if user.empty?
-    # if users.select{ |user| user[:username] == username && user[:password] == password}
-    # if (user == user [:username] && pass == user[:password])
+    verification =  users.select{ |user| user[:username] == username && user[:password] == password}
+    if verification.any?
         a = "Berhasil"
         break
+    else
+        puts "salah, coba lagi"
     end
     block += 1
-    puts "Password Salah, Coba Lagi"
 end
 
 if a == "Berhasil"
