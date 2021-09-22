@@ -6,14 +6,6 @@ password = gets.chomp
 
 users.push({:username => username, :password => password})
 
-# puts "masukkan username lagi"
-# username =  gets.chomp
-# puts "masukkan password lagi"
-# password = gets.chomp
-# puts users.select{ |user| user[:username] == username && user[:password] == password}
-
-# user = {:password => password}
-
 block = 1
 while block <= 3 do
     puts "masukkan username yang benar"
